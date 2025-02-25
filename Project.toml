@@ -1,0 +1,10 @@
+name = "Conduit"
+uuid = "c0690026-d88f-4c6f-a1f7-f222b03761d7"
+authors = ["Erik Schnetter <schnetter@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+Conduit_jll = "36ec8eac-713e-50f0-b9f1-e7516df2c55e"
+
+[compat]
+Conduit_jll = "0.9.3"
