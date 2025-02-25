@@ -8,3 +8,4 @@ Conduit_jll = "36ec8eac-713e-50f0-b9f1-e7516df2c55e"
 
 [compat]
 Conduit_jll = "0.9.3"
+julia = "1.6"
