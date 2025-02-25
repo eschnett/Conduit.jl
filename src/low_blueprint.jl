@@ -108,7 +108,7 @@ function blueprint_mesh_generate_index(cmesh::CNode, ref_path::AbstractString, n
 end
 
 """
-    blueprint_mesh_partition(cmesh::CNode, coptions::CNode, cnoutput::CNode)::Nothing
+    blueprint_mesh_partition(cmesh::CNode, coptions::CNode, coutput::CNode)::Nothing
 
 Result: `coutput`.
 
@@ -121,7 +121,7 @@ function blueprint_mesh_partition(cmesh::CNode, coptions::CNode, coutput::CNode)
 end
 
 """
-    blueprint_mesh_flatten(cmesh::CNode, coptions::CNode, cnoutput::CNode)::Nothing
+    blueprint_mesh_flatten(cmesh::CNode, coptions::CNode, coutput::CNode)::Nothing
 
 Result: `coutput`.
 
