@@ -6,7 +6,7 @@ Conduit.jl is a Julia API for the
 * [![Documentation](https://img.shields.io/badge/Docs-Dev-blue.svg)](https://eschnett.github.io/Conduit.jl/dev/)
 * [![GitHub
   CI](https://github.com/eschnett/Conduit.jl/workflows/CI/badge.svg)](https://github.com/eschnett/Conduit.jl/actions)
-* [![codecov](https://codecov.io/gh/eschnett/Conduit.jl/graph/badge.svg?token=VGMG5U8M41)](https://codecov.io/gh/eschnett/Conduit.jl)
+* [![codecov](https://codecov.io/gh/eschnett/Conduit.jl/graph/badge.svg?token=P6DHWYIKNG)](https://codecov.io/gh/eschnett/Conduit.jl)
 
 From the conduit web site:
 - Conduit is an open source project from Lawrence Livermore National
