@@ -236,6 +236,7 @@ end
 
 node_dtype(node::Node) = node_dtype(node.cnode)
 
+# TODO: Use type ids instead? Call `name_to_id` in `__init__`.
 function dtype_to_jtype(dtype::Datatype)
     if datatype_is_empty(dtype)
         return Nothing

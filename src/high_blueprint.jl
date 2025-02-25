@@ -72,8 +72,9 @@ Result: `info`.
 
 Verify passed node confirms to given blueprint mesh sub protocol.
 """
-blueprint_mesh_verify_sub_protocol(protocol::AbstractString, node::Node, info::Node) =
-    blueprint_mesh_verify_sub_protocol(protocol, node.cnode, info.cnode)
+function blueprint_mesh_verify_sub_protocol(protocol::AbstractString, node::Node, info::Node)
+    return blueprint_mesh_verify_sub_protocol(protocol, node.cnode, info.cnode)
+end
 
 """
     blueprint_mesh_generate_index(mesh::Node, ref_path::AbstractString, num_domains::Integer, index_out::Node)::Nothing
@@ -82,8 +83,9 @@ Result: `index_out`.
 
 Generate mesh::index from valid mesh.
 """
-blueprint_mesh_generate_index(mesh::Node, ref_path::AbstractString, num_domains::Integer, index_out::Node) =
-    blueprint_mesh_generate_index(mesh.cnode, ref_path, num_domains, index_out.cnode)
+function blueprint_mesh_generate_index(mesh::Node, ref_path::AbstractString, num_domains::Integer, index_out::Node)
+    return blueprint_mesh_generate_index(mesh.cnode, ref_path, num_domains, index_out.cnode)
+end
 
 """
     blueprint_mesh_partition(mesh::Node, options::Node, output::Node)::Nothing
@@ -92,8 +94,9 @@ Result: `output`.
 
 Partition a mesh
 """
-blueprint_mesh_partition(mesh::Node, options::Node, output::Node) =
-    blueprint_mesh_partition(mesh.cnode, options.cnode, output.cnode)
+function blueprint_mesh_partition(mesh::Node, options::Node, output::Node)
+    return blueprint_mesh_partition(mesh.cnode, options.cnode, output.cnode)
+end
 
 """
     blueprint_mesh_flatten(mesh::Node, options::Node, output::Node)::Nothing
@@ -111,8 +114,9 @@ Result: `res`.
 
 Interface to generate example mesh blueprint data.
 """
-blueprint_mesh_examples_basic(mesh_type::AbstractString, nx::Integer, ny::Integer, nz::Integer, res::Node) =
-    blueprint_mesh_examples_basic(mesh_type, nx, ny, nz, res.cnode)
+function blueprint_mesh_examples_basic(mesh_type::AbstractString, nx::Integer, ny::Integer, nz::Integer, res::Node)
+    return blueprint_mesh_examples_basic(mesh_type, nx, ny, nz, res.cnode)
+end
 
 """
     blueprint_mesh_examples_braid(mesh_type::AbstractString, nx::Integer, ny::Integer, nz::Integer, res::Node)::Nothing
@@ -121,8 +125,9 @@ Result: `res`.
 
 Interface to generate example mesh blueprint data.
 """
-blueprint_mesh_examples_braid(mesh_type::AbstractString, nx::Integer, ny::Integer, nz::Integer, res::Node) =
-    blueprint_mesh_examples_braid(mesh_type, nx, ny, nz, res.cnode)
+function blueprint_mesh_examples_braid(mesh_type::AbstractString, nx::Integer, ny::Integer, nz::Integer, res::Node)
+    return blueprint_mesh_examples_braid(mesh_type, nx, ny, nz, res.cnode)
+end
 
 """
     blueprint_mesh_examples_julia(
@@ -141,7 +146,7 @@ Result: `res`.
 
 Interface to generate example mesh blueprint data.
 """
-blueprint_mesh_examples_julia(
+function blueprint_mesh_examples_julia(
     nx::Integer,
     ny::Integer,
     x_min::AbstractFloat,
@@ -151,7 +156,9 @@ blueprint_mesh_examples_julia(
     c_re::AbstractFloat,
     c_im::AbstractFloat,
     res::Node,
-) = blueprint_mesh_examples_julia(nx, ny, x_min, x_max, y_min, y_max, c_re, c_im, res.cnode)
+)
+    return blueprint_mesh_examples_julia(nx, ny, x_min, x_max, y_min, y_max, c_re, c_im, res.cnode)
+end
 
 """
     blueprint_mesh_examples_spiral(ndomains::Integer, res::Node)::Nothing
@@ -169,8 +176,9 @@ Result: `cres`.
 
 Interface to generate example mesh blueprint data.
 """
-blueprint_mesh_examples_polytess(nlevels::Integer, nz::Integer, res::Node) =
-    blueprint_mesh_examples_polytess(nlevels, nz, res.cnode)
+function blueprint_mesh_examples_polytess(nlevels::Integer, nz::Integer, res::Node)
+    return blueprint_mesh_examples_polytess(nlevels, nz, res.cnode)
+end
 
 """
     blueprint_mesh_examples_misc(mesh_type::AbstractString, nx::Integer, ny::Integer, nz::Integer, res::Node)::Nothing
@@ -179,8 +187,9 @@ Result: `res`.
 
 Interface to generate example mesh blueprint data.
 """
-blueprint_mesh_examples_misc(mesh_type::AbstractString, nx::Integer, ny::Integer, nz::Integer, res::Node) =
-    blueprint_mesh_examples_misc(mesh_type, nx, ny, nz, res.cnode)
+function blueprint_mesh_examples_misc(mesh_type::AbstractString, nx::Integer, ny::Integer, nz::Integer, res::Node)
+    return blueprint_mesh_examples_misc(mesh_type, nx, ny, nz, res.cnode)
+end
 
 ################################################################################
 # conduit_blueprint_table c interface
@@ -201,8 +210,9 @@ Result: `info`.
 
 Verify passed node conforms to the blueprint table protocol.
 """
-blueprint_table_verify_sub_protocol(protocol::AbstractString, node::Node, info::Node) =
-    blueprint_table_verify_sub_protocol(protocol, node.cnode, info.cnode)
+function blueprint_table_verify_sub_protocol(protocol::AbstractString, node::Node, info::Node)
+    return blueprint_table_verify_sub_protocol(protocol, node.cnode, info.cnode)
+end
 
 """
     blueprint_table_examples_basic(nx::Integer, ny::Integer, nz::Integer, res::Node)::Nothing
@@ -211,5 +221,6 @@ Result: `res`.
 
 Interface to generate example table blueprint data.
 """
-blueprint_table_examples_basic(nx::Integer, ny::Integer, nz::Integer, res::Node) =
-    blueprint_table_examples_basic(nx, ny, nz, res.cnode)
+function blueprint_table_examples_basic(nx::Integer, ny::Integer, nz::Integer, res::Node)
+    return blueprint_table_examples_basic(nx, ny, nz, res.cnode)
+end
