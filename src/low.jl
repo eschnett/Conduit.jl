@@ -2,15 +2,25 @@
 
 ################################################################################
 
-const IndexT = Int
+const IndexT = Int64
 
 function __init__()
     # Did we make the right guess?
-    datatype_sizeof_index_t() == sizeof(IndexT) || throw(InitError(Conduit, "sizeof(index_t) differs between C and Julia"))
+    datatype_sizeof_index_t() == sizeof(IndexT) || throw(InitError(:Conduit, "sizeof(index_t) differs between C and Julia"))
     return nothing
 end
 
 ################################################################################
+
+# typedef for conduit_datatype
+
+# This is an opaque struct in C
+struct CDatatypeImpl end
+
+struct CDatatype
+    datatype::Ptr{CDatatypeImpl}
+end
+CDatatype() = CDatatype(Ptr{CDatatypeImpl}())
 
 # typedef for conduit_node
 
@@ -23,16 +33,6 @@ end
 CNode() = CNode(Ptr{CNodeImpl}())
 Base.cconvert(::Type{Ptr{CNodeImpl}}, cnode::CNode) = cnode.ptr
 Base.cconvert(::Type{CNode}, ptr::Ptr{CNodeImpl}) = CNode(ptr)
-
-# typedef for conduit_datatype
-
-# This is an opaque struct in C
-struct CDatatypeImpl end
-
-struct CDatatype
-    datatype::Ptr{CDatatypeImpl}
-end
-CDatatype() = CDatatype(Ptr{CDatatypeImpl}())
 
 ################################################################################
 # conduit

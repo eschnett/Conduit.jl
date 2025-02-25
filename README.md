@@ -1,7 +1,7 @@
 # Conduit.jl: Simplified Data Exchange for HPC Simulations
 
-Conduit is a Julia API for the
-[`conduit`](https://github.com/LLNL/conduit) project.
+Conduit.jl is a Julia API for the
+[Conduit](https://github.com/LLNL/conduit) project.
 
 * [![Documentation](https://img.shields.io/badge/Docs-Dev-blue.svg)](https://eschnett.github.io/Conduit.jl/dev/)
 * [![GitHub
