@@ -191,6 +191,29 @@ function blueprint_mesh_examples_misc(mesh_type::AbstractString, nx::Integer, ny
     return blueprint_mesh_examples_misc(mesh_type, nx, ny, nz, res.cnode)
 end
 
+"""
+    blueprint_mesh_examples_generate(example_name::AbstractString, opts::Node, res::Node)
+
+Result: `res`.
+
+generates a named example mesh using options.
+expects opts node to contains relevant args for each example.
+"""
+function blueprint_mesh_examples_generate(example_name::AbstractString, opts::Node, res::Node)
+    return blueprint_mesh_examples_generate(example_name, opts.cnode, res.cnode)
+end
+
+"""
+    blueprint_mesh_examples_generate_default_options(example_name::AbstractString, opts::Node)
+
+Result: `opts`.
+
+creates the default options for a given example
+"""
+function blueprint_mesh_examples_generate_default_options(example_name::AbstractString, opts::Node)
+    return blueprint_mesh_examples_generate_default_options(example_name, opts.cnode)
+end
+
 ################################################################################
 # conduit_blueprint_table c interface
 
